@@ -4,7 +4,7 @@
 
 Email4.dev solves the problem of using an email service without a backend. That said; I can't say webhooks are totally out of scope. If they enter the roadmap though, we shall only accomodate for custom http webhooks, not direct integrations (e.g. Discord, Teams, Telegram, etc.).
 
-If direct integrations become available via the community (a.k.a. 3rd party contributors), we shall accomodate for them with their own NATS subject and configuration (via the dashboard), but they won't be merged in any Email4.dev repo or be officially supported.
+If direct integrations become available via the community (a.k.a. 3rd party contributors), we shall accomodate for them with their own Redis Streams and configuration (via the dashboard), but they won't be merged in any Email4.dev repo or be officially supported.
 
 ## Server Side Form Submissions
 

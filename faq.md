@@ -9,12 +9,6 @@ Money, we have families to raise. The FOSS version has been carefully assembled 
 1. It natively runs Typescript, so no build step needed.
 2. Usually is faster than node and less picky with packages than deno.
 
-## Why use NATS Object Storage for attachments instead of Pocketbase file storage?
-
-1. It is faster
-2. Easier to maintain
-3. Persistent attachment storage is not needed, because they are attached in the sent emails, unlike in the SaaS where there is an option to include them as links in the email body.
-
 ## What happens if I exceed my SaaS plan?
 
 - You shall receive a warning about it.

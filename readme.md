@@ -10,7 +10,7 @@ There’s a self-hostable FOSS version and a SaaS variant with additional featur
 
 - 📨 Accept form submissions via plain forms or javascript `fetch()`
 - ⚙️ API and mailer written in **TypeScript** using **Bun**
-- 📬 Emails processed asynchronously using **NATS**
+- 📬 Emails processed asynchronously using **ValKey**
 - 🧾 Simple dashboard built with **SvelteKit**
 - 🛡️ Advanced Anti-spam, bouncer, and advanced logging (SaaS only)
 
@@ -22,7 +22,8 @@ This project is split into microservices:
 
 - **API Backend** – Handles form submissions and API requests.
 - **Mailer Service** – Subscribes to the mail queue and sends emails.
-- **Mail Queue (NATS)** – Core event system for distributing mail jobs.
+- **Mail Queue (ValKey)** – Core event system for distributing mail jobs.
+- **Attachment Storage (MinIO)** – S3 Compatible object storage. It's optional, you can use any S3 compatible PaaS.
 - **Dashboard (SvelteKit)** – View submissions, manage forms, configure settings.
 - **Database** – Uses **Pocketbase** for auth and persistence.
 
@@ -34,7 +35,8 @@ This project is split into microservices:
 | --------------- | --------------------------------------------------------------------------------------------- |
 | API             | [TypeScript](https://github.com/microsoft/TypeScript) + [Bun](https://github.com/oven-sh/bun) |
 | Mailer          | [TypeScript](https://github.com/microsoft/TypeScript) + [Bun](https://github.com/oven-sh/bun) |
-| Queue           | [NATS](https://github.com/nats-io)                                                            |
+| Queue           | [ValKey](https://github.com/valkey-io/valkey)                                                 |
+| Attachments     | [MinIO](https://github.com/minio/minio)                                                       |
 | Dashboard       | [SvelteKit](https://github.com/sveltejs/kit)                                                  |
 | Database/Auth   | [Pocketbase](https://github.com/pocketbase/pocketbase)                                        |
 | Captcha         | [Altcha](https://github.com/altcha-org/altcha-lib)                                            |

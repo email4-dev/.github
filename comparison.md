@@ -4,7 +4,7 @@
 | --------------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------- |
 | Mailer Service  | Custom            | No        | An email service that subscribes to the mail queue and processes emails                                               |
 | Bouncer Service | Custom            | Yes       | A bouncer service that fetches bounce emails from a designated mailbox and bans recipients to prevent IP blacklisting |
-| Mail Queue      | NATS              | No        | A pub-sub service used to pass events and data between the services                                                   |
+| Mail Queue      | Valkey            | No        | A Redis fork used to pass events and data between the services                                                        |
 | Advanced Logs   | ClickHouse        | Yes       | Also enables analytics. In the FOSS version plain console logging is used                                             |
 | Anti-Spam       | Rspamd            | Yes       | If your email service already provides a spam filter you probably don't need this                                     |
 | API Backend     | Custom            | No        | Handles all form submissions and API requests                                                                         |
@@ -23,10 +23,6 @@ SaaS only
 FOSS: Console logs for all services
 SaaS: Detailed log filtering and stats via the Dashboard
 
-## Attachments
-FOSS: configurable 20mb limit, temporarily stored in NATS, sent as attachments
-SaaS: no size limit, account storage quota, permanently saved in s3 compatible object storage, configurably sent as links (less chance to be flagged/blocked + faster to send)
-
 ## Calendar Events
 FOSS: standard ics file attachments
 SaaS: icalEvent Support (Request / Publish / Cancel)
@@ -35,8 +31,8 @@ SaaS: icalEvent Support (Request / Publish / Cancel)
 SaaS only
 
 ## Spam prevention (all are optional)
-FOSS: PoW based captcha +/ honeypot + Domain validation
-SaaS: PoW based captcha +/ honeypot + Domain validation + rspamd Spam Filter + bounce management
+FOSS: PoW based captcha + honeypot + Domain validation
+SaaS: PoW based captcha + honeypot + Domain validation + rspamd Spam Filter + bounce management
 
 ## Support
 FOSS: [Github Discussions](https://github.com/orgs/email4-dev/discussions) ([issues](https://github.com/email4-dev/.github/issues) are for bugs and feature requests only)
