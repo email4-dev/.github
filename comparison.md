@@ -13,8 +13,8 @@
 | Dashboard       | Sveltekit         | No        | The FOSS version lacks multi-tenancy, log viewing, and analytics                                                      |
 
 ## Email Server / Account
-FOSS: BYO (Bring Your Own)
-SaaS: High availability Email4.dev email service + BYO, optional backup email server configuration (in case your main server is down)
+FOSS: BYO (Bring Your Own), single email account for all forms
+SaaS: High availability Email4.dev email service + BYO, optional backup email server configuration (in case your main server is down), each form may use a seperate email account
 
 ## Multiple users/tenants
 SaaS only
@@ -31,8 +31,8 @@ SaaS: icalEvent Support (Request / Publish / Cancel)
 SaaS only
 
 ## Spam prevention (all are optional)
-FOSS: PoW based captcha + honeypot + Domain validation
-SaaS: PoW based captcha + honeypot + Domain validation + rspamd Spam Filter + bounce management
+FOSS: PoW based captcha + honeypot + domain validation
+SaaS: PoW based captcha + honeypot + domain validation + rspamd spam filter + bounce management
 
 ## Support
 FOSS: [Github Discussions](https://github.com/orgs/email4-dev/discussions) ([issues](https://github.com/email4-dev/.github/issues) are for bugs and feature requests only)

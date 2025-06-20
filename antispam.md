@@ -60,18 +60,18 @@ We use 3 types of domain verification:
 
 A custom TXT DNS record you need to add to your domain for forms to be accepted from it. You can exclude forms by marking them as unprotected.
 
-## 2. SPF
+## 2. SPF (SaaS Only)
 
 Your domain is checked for SPF DNS record alignment with your email gateway. Misalignment only produces a warning in the dashboard.
 
-## 3. DKIM
+## 3. DKIM (SaaS Only)
 
 Your domain is checked for DKIM DNS record existance. A missing DKIM DNS record only produces a warning in the dashboard.
 
-# Spam Filter
+# Spam Filter (SaaS Only)
 
 In our SaaS product we have incorporated a pre-trained rspamd instance that checks all form submissions for spam. You can choose between `flag` or `reject` for its action.
 
-# Bounce Management
+# Bounce Management (SaaS Only)
 
 In our SaaS product we also include a bouncer service that monitors bounces and bans recipient addresses to avoid grey/black lists.

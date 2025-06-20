@@ -8,11 +8,12 @@ There’s a self-hostable FOSS version and a SaaS variant with additional featur
 
 ## ✨ Features
 
-- 📨 Accept form submissions via plain forms or javascript `fetch()`
+- 📨 Accept form submissions via HTML forms or javascript `fetch()`
 - ⚙️ API and mailer written in **TypeScript** using **Bun**
 - 📬 Emails processed asynchronously using **ValKey**
 - 🧾 Simple dashboard built with **SvelteKit**
 - 🛡️ Advanced Anti-spam, bouncer, and advanced logging (SaaS only)
+- 🗄 Receive attachments as file links, optionally OTP protected or with download limit / expiry
 
 ---
 
@@ -22,7 +23,8 @@ This project is split into microservices:
 
 - **API Backend** – Handles form submissions and API requests.
 - **Mailer Service** – Subscribes to the mail queue and sends emails.
-- **Mail Queue (ValKey)** – Core event system for distributing mail jobs.
+- **Mailer Retrier Service** – Subscribes to the mail queue and sends emails.
+- **Mail Queue (ValKey)** – Core streaming system for distributing mail jobs.
 - **Attachment Storage (MinIO)** – S3 Compatible object storage. It's optional, you can use any S3 compatible PaaS.
 - **Dashboard (SvelteKit)** – View submissions, manage forms, configure settings.
 - **Database** – Uses **Pocketbase** for auth and persistence.
