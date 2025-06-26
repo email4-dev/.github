@@ -1,5 +1,9 @@
 # FAQ
 
+## Altcha is not working, responses arrive already expired or expire too soon (less than a minute)
+
+Make sure your server's time is correct. Install an NTP daemon if you don't have one already, and restart the docker containers.
+
 ## Why make a SaaS version? Why isn't the X feature free?
 
 Money, we have families to raise. The FOSS version has been carefully assembled to enable individual and small business use where multi-tenancy, advanced logging, and analytics are not crucial.
